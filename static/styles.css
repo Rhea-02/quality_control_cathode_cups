@@ -1,0 +1,232 @@
+/* Quality Control Dashboard - Custom Styles */
+
+:root {
+    --primary-blue: #4285F4;
+    --success-green: #34C759;
+    --error-red: #FF3B30;
+    --warning-orange: #FF9500;
+    --background-light: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --border-color: #E5E7EB;
+}
+
+/* Global styling */
+.main {
+    background-color: var(--background-light);
+}
+
+/* Metric cards */
+.metric-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.metric-change {
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+.metric-change.positive {
+    color: var(--success-green);
+}
+
+.metric-change.negative {
+    color: var(--error-red);
+}
+
+/* Feed item cards */
+.feed-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feed-card img {
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.feed-info {
+    flex: 1;
+}
+
+.feed-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.feed-id {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.feed-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.feed-status.good {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.feed-status.defective {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.feed-confidence {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* Alerts */
+.alert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: var(--background-light);
+    border-left: 3px solid;
+}
+
+.alert-item.info {
+    border-left-color: var(--primary-blue);
+}
+
+.alert-item.warning {
+    border-left-color: var(--warning-orange);
+}
+
+.alert-item.success {
+    border-left-color: var(--success-green);
+}
+
+.alert-icon {
+    font-size: 1.25rem;
+}
+
+.alert-text {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* Buttons */
+.action-button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.action-button.primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.action-button.secondary {
+    background-color: #6B7280;
+    color: white;
+}
+
+.action-button.warning {
+    background-color: var(--warning-orange);
+    color: white;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Section headers */
+.section-header {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--success-green);
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Panel containers */
+.panel {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    height: 100%;
+}
+
+/* Streamlit overrides */
+.stButton > button {
+    width: 100%;
+}
+
+/* Hide Streamlit branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}

@@ -1,0 +1,33 @@
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Environment variables
+.env
+
+# Backup files
+*.bak
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Model files
+model.pkl
+*.pkl
